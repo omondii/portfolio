@@ -1,0 +1,19 @@
+$primary-color: #ffd700;
+
+@import 'animate.css';
+
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('./assets/fonts/JosefinSans-MediumItalic.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('./assets/fonts/Unbounded-Medium.ttf') format('ttf');
+}
+
+input,
+textarea {
+  font-family: 'JosefinSans';
+}
