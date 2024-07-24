@@ -49,6 +49,31 @@ body, h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
 }
 
+.blog-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.blog {
+    flex: 1 1 calc(50% - 16px);
+    border: 1px solid #ccc;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.blog img {
+    width: 100%;
+}
+
+.blog a {
+    display: block;
+    margin-top: 8px;
+    text-align: center;
+    color: #0073e6;
+    text-decoration: none;
+}
+
 .right {
     margin-left: 800px;
     padding-bottom: -200px;
