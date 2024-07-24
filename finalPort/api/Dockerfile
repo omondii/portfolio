@@ -19,4 +19,4 @@ ENV PORT 3000
 EXPOSE 3000
 
 # On the terminal, run the application
-CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:3000", "app:app"]
+CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:3000", "wsgi:app"]
