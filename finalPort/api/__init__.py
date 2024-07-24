@@ -1,5 +1,5 @@
 from flask import Flask
-from config import Config
+from .config import Config
 """
 Server creation - Serves my personal portfolio
 """
