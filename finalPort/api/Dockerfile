@@ -13,6 +13,7 @@ COPY . .
 
 # set environment variables
 ENV FLASK_APP=app.py
+ENV PORT 3000
 
 # Expose the port to use
 EXPOSE 3000
