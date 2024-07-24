@@ -18,4 +18,4 @@ ENV FLASK_APP=app.py
 EXPOSE 3000
 
 # On the terminal, run the application
-CMD ["flask", "run", "--host=0.0.0.0"]
+CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:3000", "app:app"]
