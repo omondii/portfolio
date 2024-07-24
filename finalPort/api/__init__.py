@@ -3,7 +3,7 @@ from flask import Flask
 Server creation - Serves my personal portfolio
 """
 
-def create_app(config_class='api.config'):
+def create_app(config_class='Config'):
     app = Flask(__name__)
     app.config.from_object(config_class)
 
