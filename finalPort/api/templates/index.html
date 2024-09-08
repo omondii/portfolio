@@ -1,48 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Brian Omondi</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-<body class="w3-black">
+{% extends "base.html" %}
+{% block title%}Me{% endblock %}
+{% block head%}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
 
-<!-- Icon Bar (Sidebar - hidden on small screens) -->
-<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-  <!-- Avatar image in top left corner -->
-  <img src="{{ url_for('static', filename='images/profile.png') }}" style="width:100%">
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
-    <i class="fa fa-home w3-xxlarge"></i>
-    <p>HOME</p>
-  </a>
-  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-user w3-xxlarge"></i>
-    <p>ABOUT</p>
-  </a>
-  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-eye w3-xxlarge"></i>
-    <p>PROJECTS</p>
-  </a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-envelope w3-xxlarge"></i>
-    <p>CONTACT</p>
-  </a>
-</nav>
-
-<!-- Navbar on small screens (Hidden on medium and large screens) -->
-<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
-    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PROJECTS</a>
-    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
-  </div>
-</div>
-
+{%block content%}
 <!-- Page Content -->
 <div class="w3-padding-large" id="main">
   <!-- Header/Home -->
@@ -54,135 +18,119 @@
 
   <!-- About Section -->
   <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-    <h2 class="w3-text-light-grey">Hello! </h2>
+    <h2 class="w3-text-light-grey">Hello, I'm Brian Omondi.</h2>
     <p>
-      I'm Brian Omondi, a software developer fueled by curiosity and driven by passion. I specialize in crafting clean code and intuitive user experiences.
+      A software developer fueled by curiosity and driven by passion. I specialize in crafting clean code and intuitive user experiences.
       Let's build something amazing together.
     </p>
     <!-- Resume download button -->
-    <button class="w3-button w3-light-grey w3-padding-large w3-section">
+    <button class="w3-button w3-light-grey w3-padding-large w3-section" onclick="window.location.href='/downloadcv'" id="btn">
       <i class="fa fa-download"></i> Download Resume
     </button>
-    <!--
-    <h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3>
-    <p class="w3-wide">Backend</p>
-    <div class="w3-white">
-      <div class="w3-dark-grey" style="height:28px;width:95%"></div>
-    </div>
-    <p class="w3-wide">Frontend</p>
-    <div class="w3-white">
-      <div class="w3-dark-grey" style="height:28px;width:85%"></div>
-    </div>
-    <p class="w3-wide">DevOps</p>
-    <div class="w3-white">
-      <div class="w3-dark-grey" style="height:28px;width:80%"></div>
-    </div><br>
-
-    <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">11+</span><br>
-        Partners
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">55+</span><br>
-        Projects Done
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">89+</span><br>
-        Happy Clients
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">150+</span><br>
-        Meetings
-      </div>
-    </div>
-    -->
-
-  <!-- Portfolio Section -->
-  <div class="w3-padding-64 w3-content" id="photos">
-    <h2 class="w3-text-light-grey">My Projects</h2>
-    <hr style="width:200px" class="w3-opacity">
-  </div>
-    <!-- Grid for photos -->
     <!-- Grid for projects -->
-    <div class="project-grid">
-      <div class="project">
-        <img src="{{ url_for('static', filename='images/ExploreKe.png') }}" alt="ExploreKe">
-        <div class="description">
-          <p>
-            A modern blogging website for Campers. Built with Flask for the backend, react for the frontend,
-            MySql for persistent data storage and redis as a caching mechanism.
-          </p>
-        </div>
-        <a href="https://github.com/omondii/ExploreKE" target="_blank">View on GitHub</a>
-      </div>
-      <div class="project">
-        <img src="{{ url_for('static', filename='images/galaxy.png') }}" alt="EnGalactica">
-        <div class="description">
-          <p>
-            A simple web app that uses the NASA Api to render Different infomration on  Asteroids, The moon and NASAs' Picture of the Day.
-            It is built using Flask, React and Redis for cache manegement.
-          </p>
-        </div>
-        <a href="https://github.com/omondii/EnGalactica" target="_blank">View on GitHub</a>
-      </div>
-      <div class="project">
-        <img src="{{ url_for('static', filename='images/project3.jpg') }}" alt="Project 3">
-        <div class="description">
-          <p>Brief description of Project 3</p>
-        </div>
-        <a href="https://github.com/yourusername/project3" target="_blank">View on GitHub</a>
-      </div>
-      <div class="project">
-        <img src="{{ url_for('static', filename='images/project4.jpg') }}" alt="Project 4">
-        <div class="description">
-          <p>Brief description of Project 4</p>
-        </div>
-        <a href="https://github.com/yourusername/project4" target="_blank">View on GitHub</a>
-      </div>
+    <div class="w3-padding-64 w3-content" id="container">
+      <h2 class="w3-text-light-grey">My Projects</h2>
+      <hr style="width:200px" class="w3-opacity">
     </div>
+    <div class="project-grid" id="project-grid">
+      <!-- Each project goes here -->
+    </div>
+    <script src="{{ url_for('static', filename='js/projects.js') }}"></script>
+    <div>
 
+    </div>
   </div>
 
-  <!-- Contact Section -->
-  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
-    <h2 class="w3-text-light-grey">Contact Me</h2>
+  <!-- Skills grid-->
+  <h2 class="w3-text-light-grey">Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-card">
+        <div class="card-front">
+            <h3>API Development</h3>
+            <ul>
+                <li>RESTful APIs</li>
+                <li>API Security</li>
+                <li>API Versioning</li>
+            </ul>
+        </div>
+        <div class="card-back">
+          <ul>
+            <li>Python</li>
+            <li>NodeJs</li>
+            <li>Golang</li>
+          </ul>
+        </div>
+    </div>
+    <div class="skill-card">
+      <div class="card-front">
+          <h3>Database Management</h3>
+          <ul>
+              <li>Relation Databases</li>
+              <li>No-SQL Databases</li>
+              <li>Database Migration</li>
+          </ul>
+      </div>
+      <div class="card-back">
+          <ul>
+            <li>MySQL</li>
+            <li>PostgreSQL</li>
+            <li>MongoDB</li>
+          </ul>
+      </div>
+  </div>
+  <div class="skill-card">
+    <div class="card-front">
+        <h3>Testing</h3>
+        <ul>
+            <li>Functional Tests</li>
+            <li>Unit Tests</li>
+        </ul>
+    </div>
+    <div class="card-back">
+        <ul>
+          <li>PyTest</li>
+          <li>Cypress</li>
+        </ul>
+    </div>
+</div>
+<div class="skill-card">
+  <div class="card-front">
+      <h3>Perfmance Optimazation</h3>
+      <ul>
+          <li>Caching</li>
+          <li>Load Balancing</li>
+      </ul>
+  </div>
+  <div class="card-back">
+      <ul>
+        <li>Redis</li>
+        <li>HA Proxy</li>
+      </ul>
+  </div>
+</div>
+    <!-- Repeat for other categories -->
+     <div>
+      <script src="{{ url_for('static', filename='js/skills.js') }}"></script>
+     </div>
+</div>
+
+  <!-- Blogs grid-->
+  <div class="w3-padding-64 w3-content" id="photos">
+    <h2 class="w3-text-light-grey">My Blogs</h2>
     <hr style="width:200px" class="w3-opacity">
 
-    <div class="w3-section">
-      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: omondiibrian00@gmail.com</p>
-    </div><br>
-    <p>Let's get in touch. Send me a message:</p>
-
-    <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
-      <p>
-        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
-      </p>
-    </form>
-  <!-- End Contact Section -->
-  </div>
-
-    <!-- Footer -->
-  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-  <!-- End footer -->
-    <div class="right" >
-      <i class="fa fa-facebook-official w3-hover-opacity"></i>
-      <i class="fa fa-twitter w3-hover-opacity"></i>
-      <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <div class="blog-grid">
+      {% for post in blog_posts %}
+      <div class="blog">
+        <img src="#" alt="ExploreKe">
+        <h2> {{ post.title }} </h2>
+        <h2> {{ post.preview }} </h2>
+        <a href="{{ url_for('blog_post', post_id=post.id) }}" class="read-more">Read More</a>
+      </div>
+      {% endfor %}
     </div>
-  </footer>
+  </div>
 
 <!-- END PAGE CONTENT -->
 </div>
-
-</body>
-</html>
+{% endblock %}
