@@ -1,9 +1,9 @@
 import os
 import base64
-from dotenv import load_dotenv
 from flask import (render_template, Blueprint, jsonify,
                    url_for, send_from_directory, abort)
 import requests
+from dotenv import load_dotenv
 import csv
 
 
