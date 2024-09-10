@@ -3,6 +3,7 @@ import base64
 from flask import (render_template, Blueprint, jsonify,
                    url_for, send_from_directory, abort)
 import requests
+from python-dotenv import load_dotenv
 import csv
 
 
