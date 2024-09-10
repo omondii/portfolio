@@ -9,7 +9,6 @@ import csv
 
 app = Blueprint('routes', __name__)
 load_dotenv()
-
 HubToken = os.getenv('GITHUB_TOKEN')
 
 
