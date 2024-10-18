@@ -24,9 +24,10 @@
       Let's build something amazing together.
     </p>
     <!-- Resume download button -->
-    <button class="w3-button w3-light-grey w3-padding-large w3-section" onclick="window.location.href='/downloadcv'" id="btn">
+    <button class="custom-button" onclick="window.location.href='/downloadcv'" id="btn">
       <i class="fa fa-download"></i> Download Resume
     </button>
+  
     <!-- Grid for projects -->
     <div class="w3-padding-64 w3-content" id="container">
       <h2 class="w3-text-light-grey">My Projects</h2>
@@ -42,94 +43,114 @@
   </div>
 
   <!-- Skills grid-->
-  <h2 class="w3-text-light-grey">Skills</h2>
-  <div class="skills-grid">
+<h2 class="w3-text-light-grey">Skills</h2>
+<div class="skills-grid">
     <div class="skill-card">
-        <div class="card-front">
-            <h3>API Development</h3>
-            <ul>
-                <li>RESTful APIs</li>
-                <li>API Security</li>
-                <li>API Versioning</li>
-            </ul>
-        </div>
-        <div class="card-back">
-          <ul>
-            <li>Python</li>
-            <li>NodeJs</li>
-            <li>Golang</li>
-          </ul>
+        <div class="card-content">
+            <div class="card-front">
+                <h3>API Development</h3>
+                <ul>
+                    <li>RESTful APIs</li>
+                    <li>API Security</li>
+                    <li>API Versioning</li>
+                </ul>
+            </div>
+            <div class="card-back">
+                <h3>API Development</h3>
+                <ul>
+                    <li>CSHARP</li>
+                    <li>C</li>
+                    <li>PYTHON</li>
+                </ul>
+            </div>
         </div>
     </div>
     <div class="skill-card">
-      <div class="card-front">
-          <h3>Database Management</h3>
-          <ul>
-              <li>Relation Databases</li>
-              <li>No-SQL Databases</li>
-              <li>Database Migration</li>
-          </ul>
-      </div>
-      <div class="card-back">
-          <ul>
-            <li>MySQL</li>
-            <li>PostgreSQL</li>
-            <li>MongoDB</li>
-          </ul>
-      </div>
-  </div>
-  <div class="skill-card">
-    <div class="card-front">
-        <h3>Testing</h3>
-        <ul>
-            <li>Functional Tests</li>
-            <li>Unit Tests</li>
-        </ul>
+        <div class="card-content">
+            <div class="card-front">
+                <h3>Database Management</h3>
+                <ul>
+                    <li>Relation Databases</li>
+                    <li>No-SQL Databases</li>
+                    <li>Database Design</li>
+                </ul>
+            </div>
+            <div class="card-back">
+                <h3>Database Management</h3>
+                <ul>
+                    <li>MySQL</li>
+                    <li>PostgreSQL</li>
+                    <li>MongoDB</li>
+                </ul>
+            </div>
+        </div>
     </div>
-    <div class="card-back">
-        <ul>
-          <li>PyTest</li>
-          <li>Cypress</li>
-        </ul>
+    <div class="skill-card">
+        <div class="card-content">
+            <div class="card-front">
+                <h3>Testing</h3>
+                <ul>
+                    <li>Unit Tests</li>
+                    <li>Functional Tests</li>
+                    <li>End-to-End</li>
+                </ul>
+            </div>
+            <div class="card-back">
+                <h3>Testing</h3>
+                <ul>
+                    <li>XUnit</li>
+                    <li>PyTest</li>
+                    <li>Cypress</li>
+                </ul>
+            </div>
+        </div>
     </div>
-</div>
-<div class="skill-card">
-  <div class="card-front">
-      <h3>Perfmance Optimazation</h3>
-      <ul>
-          <li>Caching</li>
-          <li>Load Balancing</li>
-      </ul>
-  </div>
-  <div class="card-back">
-      <ul>
-        <li>Redis</li>
-        <li>HA Proxy</li>
-      </ul>
-  </div>
-</div>
+    <div class="skill-card">
+        <div class="card-content">
+            <div class="card-front">
+                <h3>Performance Optimization</h3>
+                <ul>
+                    <li>Caching</li>
+                    <li>Load Balancing</li>
+                </ul>
+            </div>
+            <div class="card-back">
+                <h3>Performance Optimization</h3>
+                <ul>
+                    <li>Redis</li>
+                    <li>HA Proxy</li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <!-- Repeat for other categories -->
-     <div>
-      <script src="{{ url_for('static', filename='js/skills.js') }}"></script>
-     </div>
+    <div>
+        <script src="{{ url_for('static', filename='js/skills.js') }}"></script>
+    </div>
 </div>
+
 
   <!-- Blogs grid-->
   <div class="w3-padding-64 w3-content" id="photos">
     <h2 class="w3-text-light-grey">My Blogs</h2>
     <hr style="width:200px" class="w3-opacity">
-
     <div class="blog-grid">
-      {% for post in blog_posts %}
       <div class="blog">
-        <img src="#" alt="ExploreKe">
-        <h2> {{ post.title }} </h2>
-        <h2> {{ post.preview }} </h2>
-        <a href="{{ url_for('blog_post', post_id=post.id) }}" class="read-more">Read More</a>
+        <img src="path/to/your/image1.jpg" alt="Blog Image 1" style="width:100%;height:auto;">
+        <p lang="en">Securing Your Ubuntu System: A Practical Guide</p>
+        <p>Essential Steps to Protect Your Linux Environment Part I</p>
+        <a data-post-link href="https://brianomondi.substack.com/p/securing-your-ubuntu-system-a-practical">Read on Substack</a>
       </div>
-      {% endfor %}
+      <div class="blog">
+        <img src="path/to/your/image2.jpg" alt="Blog Image 2" style="width:100%;height:auto;">
+        <p lang="en">Securing Your Ubuntu System: A Practical Guide</p>
+        <p>Essential Steps to Protect Your Linux Environment Part II</p>
+        <a data-post-link href="https://brianomondi.substack.com/p/securing-your-ubuntu-system-a-practical">Read on Substack</a>
+      </div>
+      <script async src="https://substack.com/embedjs/embed.js" charset="utf-8"></script>
     </div>
   </div>
+  
 
 <!-- END PAGE CONTENT -->
 </div>
