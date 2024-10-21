@@ -1,8 +1,12 @@
-body,h2, h3, h4, h5, h6 {
+body, h2, h3, h4, h5, h6 {
     font-family: "Montserrat", sans-serif;
     background: #000000;
     color: #ffffff;
     font-size: 20px;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    width: 100%; /* Ensure full width */
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 h1 {
@@ -19,7 +23,7 @@ h2 {
 }
 
 .custom-button {
-    background-color: #0073e6; 
+    background-color: #0073e6;
     color: #fff;
     border: none;
     padding: 15px 30px;
@@ -39,7 +43,6 @@ h2 {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-
 .w3-row-padding img {
     margin-bottom: 12px;
 }
@@ -52,13 +55,13 @@ h2 {
 #main {
     margin-left: 25%;
     margin-right: 25%;
-
 }
 
 /* Remove margins from "page content" on small screens */
 @media only screen and (max-width: 600px) {
     #main {
         margin-left: 0;
+        margin-right: 0;
     }
 }
 
@@ -66,7 +69,7 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
-} 
+}
 
 .project {
     flex: 1 1 calc(50% - 16px);
@@ -84,36 +87,36 @@ h2 {
     text-align: center;
     color: rgb(105, 160, 160);
     text-decoration: none;
+}
 
-}.blog-grid {
-     display: flex;
-     flex-wrap: wrap;
-     gap: 16px;
- }
+.blog-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
 
- .blog {
-     flex: 1 1 calc(50% - 16px);
-     padding: 16px;
-     box-sizing: border-box;
- }
+.blog {
+    flex: 1 1 calc(50% - 16px);
+    padding: 16px;
+    box-sizing: border-box;
+}
 
- .blog img {
-     width: 100%;
- }
+.blog img {
+    width: 100%;
+}
 
- .blog a {
-     display: block;
-     margin-top: 8px;
-     text-align: center;
-     color: rgb(105, 160, 160);
-     text-decoration: none;
- }
+.blog a {
+    display: block;
+    margin-top: 8px;
+    text-align: center;
+    color: rgb(105, 160, 160);
+    text-decoration: none;
+}
 
 .right {
     margin-left: 800px;
     padding-bottom: -200px;
 }
-
 
 /* skills */
 .skills-grid {
