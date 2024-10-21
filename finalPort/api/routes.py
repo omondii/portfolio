@@ -23,7 +23,7 @@ def download_cv():
     """ Resume download view. Downloads the updated cv file
         in the project dir """
     return send_from_directory(directory='static',
-                               path='BOmondiCV.pdf`', as_attachment=True)
+                               path='BrianOmondi_CV.pdf', as_attachment=True)
 
 
 def get_readme(readme_data):
