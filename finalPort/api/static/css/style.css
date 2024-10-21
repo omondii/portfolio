@@ -1,18 +1,15 @@
-/* Reset default padding and margins */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body, h2, h3, h4, h5, h6 {
     font-family: "Montserrat", sans-serif;
     background: #000000;
     color: #ffffff;
     font-size: 20px;
+    margin: 0;
+    padding: 0;
     width: 100%;
     overflow-x: hidden;
 }
+
+
 
 h1 {
     font-size: 36px;
@@ -64,10 +61,19 @@ h2 {
     padding: 0 20px;
 }
 
-/* Adjust container for small screens */
-@media only screen and (max-width: 600px) {
+/* Adjust container for larger screens*/
+@media (min-width: 600px) {
     #main {
-        padding: 0 10px;
+        max-width: 75%;
+        padding: 0 20px;
+    }
+}
+
+/* Adjust container for small screens */
+@media (max-width: 600px) {
+    #main {
+        max-width: 100%;
+        padding: 0 10px; 
     }
 }
 
